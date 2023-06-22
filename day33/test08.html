@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="UTF-8">
+<title>반응형 미디어쿼리</title> 
+<style type="text/css">
+    h1, h2, ul, li, p, div {margin:0; padding:0; box-sizing:border-box;}
+    li {list-style-type:none;}
+    .clear:after {content:""; display:block; clear:both;}
+    a {line-height:1.5; color:black;}
+    header {background:RoyalBlue;}
+    h1 {color:white; padding:10px;}
+    .gnb li {margin:10px; padding:10px; background:Salmon;}
+    .content {padding:20px;}
+    .ad {margin:10px; padding:20px; background:Chocolate;}
+    footer {padding:10px; background:SkyBlue;}
+    
+    @media all and (min-width:768px) and (max-width:1024px) {
+        .gnb {float:left; width:25%;}
+        .content {float:left; width:75%;}
+        .aside {clear:both;}
+    }
+    @media all and (min-width:1025px) {
+        .wrap {max-width:1280px; margin:0 auto;}
+        .gnb {float:left; width:20%;}
+        .content {float:left; width:50%;}
+        .aside {float:right; width:30%;}
+    }
+</style>
+</head>
+<body>
+    <div class="wrap">
+       <header>
+          <h1>L O G O</h1>
+       </header>
+       <div id="container" class="clear">
+            <div class="gnb">
+                <ul>
+                    <li><a href="#">메일</a></li>
+                    <li><a href="#">카페</a></li>
+                    <li><a href="#">블로그</a></li>
+                </ul>
+            </div>            
+            <div class="content">
+                <h2>==페이지목록==</h2>
+                <p>
+                   <a href="#">상세페이지로 이동</a><br>
+                   <a href="#">상세페이지로 이동</a><br>
+                   <a href="#">상세페이지로 이동</a><br>
+                   <a href="#">상세페이지로 이동</a><br>
+                   <a href="#">상세페이지로 이동</a><br>
+                </p>                
+          </div>
+          <div class="aside">
+              <ul class="ad">
+                  <li><h2>네이버</h2><a href="#">https://www.naver.com/</a></li>
+                  <li><h2>카카오</h2><a href="#">https://www.kakaocorp.com/page/</a></li>
+              </ul>
+          </div>
+       </div>
+        <footer>
+            <p>ⓒcopyright | All rights reserved.</p>
+        </footer>
+    </div>
+</body>

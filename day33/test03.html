@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>다양한 선택자_하위, 자식 선택자</title>
+    <style type="text/css">
+        .box > p {
+            color: cornflowerblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> <!-- 하위 모든 요소에 스타일 적용 -->
+        <p>Lorem ipsum dolor sit amet</p>
+        <p>Lorem ipsum dolor sit amet</p>
+        <ul>
+            <li><p>Lorem ipsum dolor sit amet</p></li>
+            <li><p>Lorem ipsum dolor sit amet</p></li>
+            <li><p>Lorem ipsum dolor sit amet</p></li>
+        </ul>
+    </div>
+    <p>Lorem ipsum dolor sit amet</p>
+</body>
+</html>
