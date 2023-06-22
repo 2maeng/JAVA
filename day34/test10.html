@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var randNum = Math.floor(Math.random() * 100) + 1;
+        
+        var cnt = 0;
+
+        while(true){
+            var input = prompt('1부터 100까지 정수 입력 ㄱㄱ');
+
+            if(randNum > input){
+                alert('올려보소 ㅋ');
+            }
+            else if(randNum < input){
+                alert('내려보소 ㅋ');
+            }
+            else if(randNum == input){
+                alert('증답 입니다이~~');
+                break;
+            }
+            cnt++;
+        }
+        alert(cnt + '만에 맞춤 ㅋㅋ');
+    </script>
+</body>
+</html>
