@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 요소</title>
+    <style>
+        table {
+            background-color: rgb(60, 107, 154);
+            border-radius: 5%;
+            text-align: center;
+        }
+
+        input {
+            background-color: rgb(228, 234, 239);
+        }
+    </style>
+</head>
+<body>
+    <form action="#" name="loginForm">
+    <table border="1">
+        <tr>
+            <td>아이디</td>
+            <td><input type="id" name="memberId" class="login" placeholder="5자이상" required></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" name="passwd" class="login" placeholder="10자이상" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="submit" value="데이터 전송"></td>
+        </tr>
+    </table>
+
+    <script>
+        // var elem = document.forms.loginForm;
+        var elem = document.forms['loginForm'];
+        elem.onsubmit = function(){
+            if(this.memberId.value.length < 5)
+            alert('아이디는 5자 이상이어야 합니다!');
+            this.memberId.focus();
+            return false;
+        }
+        if(this.passwd.value.length < 10){
+            alert('비밀번호는 10자 이상이어야 합니다!');
+            this.passwd.focus();
+            return false;
+        }
+
+        var arr = document.querySelectorAll('.login');
+        for(var i = 0; i < arr.length; i++){
+            arr[i].onfocus = function(){
+                this.style.backgroundColor = 'lightblue';
+            }
+            
+            arr[i].onblur = function(){
+                this.style.backgroundColor = 'white';
+            }
+        }
+
+    </script>
+</body>
+</html>

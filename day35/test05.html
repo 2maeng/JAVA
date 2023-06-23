@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes blink-effect {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      @keyframes vibration {
+        from {
+          transform: rotate(1deg);
+        }
+        to {
+          transform: rotate(-50deg);
+        }
+      }
+
+      #blue {
+        width: 500px;
+        height: 500px;
+        background-color: lightskyblue;
+        text-align: center;
+        line-height: 30;
+        animation: blink-effect 0.5s step-end infinite;
+      }
+
+      /* #green {
+        width: 500px;
+        height: 500px;
+        background-color: limegreen;
+        text-align: center;
+        line-height: 30;
+        position: absolute;
+        left: 50%;
+        transform: translateY(-100%);
+      } */
+
+      #green {
+        position: relative;
+        width: 0;
+        height: 0;
+        border-right: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-bottom: 100px solid lightcoral;
+        text-align: center;
+        line-height: 30;
+        position: absolute;
+        left: 50%;
+        transform: translateY(-300%);
+        animation: vibration 0.1s infinite;
+      }
+
+      #green::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: 30px;
+        left: -50px;
+        border-right: 50px solid transparent;
+        border-left: 50px solid transparent;
+        border-bottom: 100px solid limegreen;
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="blue" onclick="test()">파랑상자</div>
+    <div id="green" onmouseover="test2(this)" onmouseout="test3(this)">초록상자</div>
+
+    <script>
+      function test() {
+        var obj = document.getElementById('blue');
+
+        obj.style.backgroundColor = 'lightpink';
+      }
+
+      function test2(obj) {
+        obj.style.animation = 'step-start';
+      }
+
+      function test3(obj) {
+        obj.style.animation = 'step-end';
+      }
+    </script>
+  </body>
+</html>

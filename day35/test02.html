@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 입력 이벤트</title>
+    <style>
+        #box{
+            width: 300px;
+            height: 300px;
+            background-color: lightgray;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        function test1(obj){
+            obj.style.backgroundColor = 'lightgreen';
+        }
+        function test2(obj){
+            obj.style.backgroundColor = 'lightpink';
+            
+        }
+        function test3(obj){
+            obj.style.backgroundColor = 'lightblue';
+
+        }
+    </script>
+
+    <div id="box" onmouseover="test1(this)" onmousedown="test2(this)" onmouseout="test3(this)"></div>
+
+</body>
+</html>

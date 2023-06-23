@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button type="button" onclick="test()">id 속성값이 check인 목록에 변화 주기</button> 
+    <br><br>
+    <button type="button" onclick="test2()">class 속성값이 check2인 목록에 변화 주기</button> <br>
+
+    <ul>
+        <li class="check2">1번째 목록</li>
+        <li id="check">2번째 목록</li>
+        <li class="check2">3번째 목록</li>
+        <li>4번째 목록</li>
+        <li class="check2">5번째 목록</li>
+    </ul>
+
+    <script>
+        function test(){
+
+            var obj = document.getElementById('check');
+
+            obj.style.backgroundColor = 'blue';
+        }
+
+        function test2(){
+
+            var arr = document.getElementsByClassName('check2');
+
+            for(var i = 0; i < arr.length; i++){
+                arr[i].style.backgroundColor = 'lightpink';
+            }
+        }
+    </script>
+</body>
+</html>
